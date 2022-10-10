@@ -1,7 +1,7 @@
 import React from 'react';
 import ErrorBoundary from './ErrorBoundary';
-const RemoteApp = React.lazy(() => import('Remote/App'));
-const RemoteButton = React.lazy(() => import('Remote/Button'));
+const RemoteApp = React.lazy(() => import('notes-container/App'));
+const RemoteButton = React.lazy(() => import('notes-container/Button'));
 
 const RemoteWrapper = ({ children }) => (
   <div
