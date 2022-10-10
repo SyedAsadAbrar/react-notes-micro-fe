@@ -30,11 +30,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'notes_container',
+      name: 'notes_list',
       filename: 'moduleEntry.js',
       exposes: {
-        './App': './src/App',
-        './Button': './src/Button',
+        './app': './src/notes-list/component',
       },
       shared: {
         ...dependencies,

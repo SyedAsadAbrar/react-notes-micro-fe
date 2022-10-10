@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorBoundary from './components/error-boundary';
+import ErrorBoundary from './error-boundary';
 import {
   AppBar,
   Container,
@@ -20,7 +20,7 @@ import { createContext, useContext, useMemo, useState } from 'react';
 
 import './App.css';
 
-const NotesContainer = React.lazy(() => import('notes_container/App'));
+const NotesContainer = React.lazy(() => import('notes_list/app'));
 
 const RemoteWrapper = ({ children }) => (
   <ErrorBoundary>{children}</ErrorBoundary>

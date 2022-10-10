@@ -35,7 +35,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'fe_core',
       remotes: {
-        notes_container: `notes_container@http://localhost:4000/moduleEntry.js`,
+        notes_list: `notes_list@http://localhost:4000/moduleEntry.js`,
       },
       shared: {
         ...dependencies,
