@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'notes-container',
+      name: 'notes_container',
       filename: 'moduleEntry.js',
       exposes: {
         './App': './src/App',

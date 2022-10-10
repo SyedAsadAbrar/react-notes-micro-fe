@@ -29,9 +29,9 @@ module.exports = {
       template: './public/index.html',
     }),
     new ModuleFederationPlugin({
-      name: 'fe-core',
+      name: 'fe_core',
       remotes: {
-        'notes-container': `notes-container@http://localhost:4000/moduleEntry.js`,
+        notes_container: `notes_container@http://localhost:4000/moduleEntry.js`,
       },
       shared: {
         ...dependencies,
