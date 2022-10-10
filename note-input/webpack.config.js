@@ -10,7 +10,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'public'),
     },
-    port: 4000,
+    port: 4001,
   },
   module: {
     rules: [
@@ -33,7 +33,7 @@ module.exports = {
       name: 'note_input',
       filename: 'moduleEntry.js',
       exposes: {
-        './app': './src/note-input/component',
+        './app': './src/note-input',
       },
       shared: {
         ...dependencies,

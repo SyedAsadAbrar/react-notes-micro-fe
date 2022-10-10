@@ -36,6 +36,7 @@ module.exports = {
       name: 'fe_core',
       remotes: {
         notes_list: `notes_list@http://localhost:4000/moduleEntry.js`,
+        note_input: `note_input@http://localhost:4001/moduleEntry.js`,
       },
       shared: {
         ...dependencies,
