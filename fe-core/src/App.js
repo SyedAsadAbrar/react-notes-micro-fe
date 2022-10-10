@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from './components/error-boundary';
 import {
   AppBar,
   Container,
@@ -18,17 +18,12 @@ import { DarkMode, LightMode, StickyNote2 } from '@mui/icons-material';
 import { ThemeProvider } from '@mui/material/styles';
 import { createContext, useContext, useMemo, useState } from 'react';
 
+import './App.css';
+
 const NotesContainer = React.lazy(() => import('notes_container/App'));
 
 const RemoteWrapper = ({ children }) => (
-  <div
-    style={{
-      border: '1px solid red',
-      background: 'white',
-    }}
-  >
-    <ErrorBoundary>{children}</ErrorBoundary>
-  </div>
+  <ErrorBoundary>{children}</ErrorBoundary>
 );
 
 const ColorModeContext = createContext({
