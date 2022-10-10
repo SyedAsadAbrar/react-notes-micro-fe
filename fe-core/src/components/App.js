@@ -41,7 +41,7 @@ const ColorModeContext = createContext({
 const App = () => {
   const [notes, setNotes] = useState(notesMock);
   const [isSnackBarOpen, setSnackBarOpen] = useState(false);
-  const [isNotesInputFocused, setNotesInputFocused] = useState(false);
+  const [snackBarConfig, setSnackBarConfig] = useState([]);
 
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
@@ -67,6 +67,10 @@ const App = () => {
       );
     } else if (actionType === actionTypes.SHARE) {
       setSnackBarOpen(true);
+      setSnackBarConfig({
+        severity: 'success',
+        text: 'Note shared successfully!',
+      });
     } else {
       setNotes([
         new NoteDTO(
@@ -83,10 +87,6 @@ const App = () => {
   const handleSnackbarClose = () => {
     setSnackBarOpen(false);
   };
-
-  useEffect(() => {
-    console.log('isNotesInputFocused changed', isNotesInputFocused);
-  }, [isNotesInputFocused]);
 
   useEffect(
     () => console.log('isSnackBarOpen', isSnackBarOpen),
@@ -133,10 +133,10 @@ const App = () => {
       >
         <Alert
           onClose={handleSnackbarClose}
-          severity='success'
+          severity={snackBarConfig.severity}
           sx={{ width: '100%' }}
         >
-          Note shared successfully!
+          {snackBarConfig.text}
         </Alert>
       </Snackbar>
     </Box>

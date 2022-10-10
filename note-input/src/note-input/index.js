@@ -56,7 +56,10 @@ const NoteInput = ({ addNoteHandler }) => {
                   <Button
                     variant='text'
                     color='primary'
-                    onClick={() => addNoteHandler(newNoteTitle, newNote)}
+                    onClick={() => {
+                      addNoteHandler(newNoteTitle, newNote);
+                      clickAwayHandler();
+                    }}
                   >
                     Save
                   </Button>
