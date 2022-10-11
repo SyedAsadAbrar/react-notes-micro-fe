@@ -33,7 +33,7 @@ module.exports = {
       name: 'note_input',
       filename: 'moduleEntry.js',
       exposes: {
-        './app': './src/note-input',
+        '.': './src/note-input',
       },
       shared: {
         ...dependencies,

@@ -27,8 +27,8 @@ import NoteDTO from '../constants/NoteDTO';
 import { getCurrentDateAndTime } from '../utils';
 import SlideTransition from './slide-transition';
 
-const NotesList = React.lazy(() => import('notes_list/app'));
-const NoteInput = React.lazy(() => import('note_input/app'));
+const NotesList = React.lazy(() => import('notes_list'));
+const NoteInput = React.lazy(() => import('note_input'));
 
 const RemoteWrapper = ({ children }) => (
   <ErrorBoundary>{children}</ErrorBoundary>

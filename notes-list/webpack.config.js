@@ -33,7 +33,7 @@ module.exports = {
       name: 'notes_list',
       filename: 'moduleEntry.js',
       exposes: {
-        './app': './src/notes-list/component',
+        '.': './src/notes-list/component',
       },
       shared: {
         ...dependencies,
