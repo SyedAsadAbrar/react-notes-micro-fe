@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/index',
   mode: 'development',
   devServer: {
-    port: 3000,
+    port: 3001,
   },
   module: {
     rules: [
