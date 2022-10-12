@@ -1,6 +1,6 @@
 # react-notes-micro-fe
 
-A Micro-Frontend example using Webpack Module Federatio
+A Micro-Frontend example using Webpack Module Federation
 
 ## Available Scripts
 
