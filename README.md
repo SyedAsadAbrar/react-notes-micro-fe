@@ -49,6 +49,6 @@ Exposes:
 - React
 - Material UI
 
-### Base code
+## Base code
 
 [rautio/react-micro-frontend-example](https://github.com/rautio/react-micro-frontend-example)
